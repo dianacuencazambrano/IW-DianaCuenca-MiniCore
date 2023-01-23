@@ -8,13 +8,13 @@ const {
 const router = express.Router();
   
 // Get All CLients from DB
-router.get('clients', getClientsDB);
+router.get('/clients', getClientsDB);
 
 // Get All CLients from DB
-router.get('contracts', getContractsDB);
+router.get('/contracts', getContractsDB);
 
 // Get filtered results from Contracts
-router.post('filter/:data', filterContractsByDate);
+router.post('/filter/:data', filterContractsByDate);
 
 //export default router;
 module.exports = router;

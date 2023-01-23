@@ -12,4 +12,22 @@ const getContracts = (result) => {
     });   
 }
 
-module.exports = getContracts;
+const getContractsByDates = (data, result) => {
+    let datos = data.split(',');
+    //console.log('SELECT * FROM clientes_contratos WHERE (fecha_con BETWEEN "' + datos[0] + '" AND "' + datos[1] +'")');
+    db.query('SELECT * FROM clientes_contratos WHERE (fecha_con BETWEEN "' + datos[0] + '" AND "' + datos[1] +'")', (err, results) => {             
+        if(err) {
+            console.log(err);
+            result(err, null);
+        } else {
+            result(null, results);
+        }
+    });   
+}
+
+
+module.exports = 
+{
+    getContracts,
+    getContractsByDates
+};

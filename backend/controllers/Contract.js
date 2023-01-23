@@ -1,4 +1,4 @@
-const getContracts = require("../models/contractModel.js");
+const {getContracts, getContractsByDates} = require("../models/contractModel.js");
   
 // Get All Clients from DB
 const getContractsDB = (req, res) => {
@@ -12,21 +12,13 @@ const getContractsDB = (req, res) => {
 }
 
 const filterContractsByDate = (req, res) => {
-    const data  = req.body;
-    const desde = data[0];
-    const hasta = data[1];
-    const contracts = '';
-    getContracts((err, results) => {
+    getContractsByDates(req.params.data, (err, results) => {
         if (err){
             res.send(err);
         }else{
             res.json(results);
         }
     });
-
-    res
-
-
 }
 
 module.exports = {
