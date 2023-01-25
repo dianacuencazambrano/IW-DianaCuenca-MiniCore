@@ -25,5 +25,3 @@ A demonstration of a filtering of dates and calculation of amount per client is 
 - Clone repository from the link above
 - Run `npm install` in console
 - Run the `npm run serve` command and the program will run on http://localhost:8080.
-
-# IW-DianaCuenca-CRUD
