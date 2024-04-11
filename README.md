@@ -16,6 +16,10 @@ A demonstration of a filtering of dates and calculation of amount per client is 
 > https://github.com/dianacuencazambrano/backend.git
 - Clone repository from the link above
 - Run `npm install` in console
+```shell
+  pip install requirements.txt
+```
+- 
 - Create a new .env file and copy what exists in the .env.example file.
 - Here you must change the value of each variable.
 - Lastly, run the `node index.js` command and the program will run on http://localhost:3000.
